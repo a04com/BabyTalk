@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BabyTalk</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>BabyTalk</h1>
+
+    <div class="news-container">
+        {% for item in news %}
+            <div class="news-item">
+                <h2><a href="{{ item[2] }}">{{ item[0] }}</a></h2>
+                <p>{{ item[1] }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
